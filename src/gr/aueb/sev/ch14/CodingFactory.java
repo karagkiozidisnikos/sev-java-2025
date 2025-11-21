@@ -1,0 +1,23 @@
+package gr.aueb.sev.ch14;
+
+/**
+ * Singleton Design Pattern
+ * Always returns the same instance. Cannot build a new
+ * as constructor is private
+ */
+public class CodingFactory {
+
+    private static final CodingFactory INSTANCE = new CodingFactory();
+
+    private CodingFactory(){
+
+    }
+
+    public static CodingFactory getInstance() {
+        return INSTANCE;
+    }
+
+    public void sayHello(){
+        System.out.println("Hello World!");
+    }
+}
